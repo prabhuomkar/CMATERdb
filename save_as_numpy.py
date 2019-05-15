@@ -46,9 +46,9 @@ def save(numeral_type):
     train_x, train_y, test_x, test_y = [], [], [], []
 
     # List all directories & files inside the same
-    for dirname in os.listdir(os.path.join(rel_dirname, './original/'+numeral_type+'-numerals')):
+    for dirname in os.listdir(os.path.join(rel_dirname, './original/'+numeral_type)):
         count = 1
-        for filename in glob(os.path.join(rel_dirname, './original/'+numeral_type+'-numerals/'+dirname+'/*.bmp')):
+        for filename in glob(os.path.join(rel_dirname, './original/'+numeral_type+'/'+dirname+'/*.bmp')):
             img = Image.open(os.path.join(rel_dirname, filename))
             img = img.resize(DIMS)
             if numeral_type == "bangla" and count > BANGLA_SINGLE_COUNT:
@@ -62,24 +62,24 @@ def save(numeral_type):
                 train_y.append(int(dirname))
             count += 1
 
-    train_x = np.array(train_x).reshape(-1, 32, 32, 3).astype(np.float32) / 255.
-    test_x = np.array(test_x).reshape(-1, 32, 32, 3).astype(np.float32) / 255.
+    train_x = np.array(train_x).reshape(-1, 32, 32, 3).astype(np.uint8) / 255.
+    test_x = np.array(test_x).reshape(-1, 32, 32, 3).astype(np.uint8) / 255.
     train_y = np.array(train_y).reshape(-1).astype(np.int64)
     test_y = np.array(test_y).reshape(-1).astype(np.int64)
 
-    # print('Total Training: ', str(len(train['labels'])))
-    # print('Total Testing: ', str(len(test['labels'])))
-    # print('Training Data:')
-    # print(train['images'][0].shape, train['labels'][0].shape)
-    # print('Testing Data:')
-    # print(test['images'][0].shape, test['labels'][0].shape)
-    # plt.title(test['labels'][399])
-    # plt.imshow(test['images'][399])
-    # plt.show()
+    print('Total Training: ', str(len(train_x)))
+    print('Total Testing: ', str(len(test_x)))
+    print('Training Data:')
+    print(train_x[0].shape, train_y[0].shape)
+    print('Testing Data:')
+    print(test_x[0].shape, test_y[0].shape)
+    plt.title(test_y[299])
+    plt.imshow(test_x[299])
+    plt.show()
     np.savez_compressed('datasets/'+numeral_type+'-numerals/training-images.npz', images=train_x, labels=train_y)
     np.savez_compressed('datasets/'+numeral_type+'-numerals/testing-images.npz', images=test_x, labels=test_y)
 
 
 if __name__ == '__main__':
-    # save('bangla')
-    load('bangla')
+    save('telugu')
+    # load('bangla')
