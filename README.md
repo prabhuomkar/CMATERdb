@@ -1,4 +1,5 @@
 # CMATERdb
+Easy to use CMATERdb datasets converted in NumPy format
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
@@ -65,9 +66,9 @@ If you use any of the CMATERdb datasets in your work, we would appreciate a refe
 News coming for Tensorflow developers!
 
 ## The Dataset
-- **CMATERdb 3.1.1: Handwritten Bangla numeral database** is an balanced dataset of total 6000 Bangla numerals (32x32 RGB coloured, 6000 images), each having 600 images per classs(per digit).
-- **CMATERdb 3.2.1: Handwritten Devanagari numeral database** is an balanced dataset of total 3000 Bangla numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
-- **CMATERdb 3.4.1: Handwritten Telugu numeral database** is an balanced dataset of total 3000 Bangla numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
+- **CMATERdb 3.1.1: Handwritten Bangla numeral database** is a balanced dataset of total 6000 Bangla numerals (32x32 RGB coloured, 6000 images), each having 600 images per classs(per digit).
+- **CMATERdb 3.2.1: Handwritten Devanagari numeral database** is a balanced dataset of total 3000 Bangla numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
+- **CMATERdb 3.4.1: Handwritten Telugu numeral database** is a balanced dataset of total 3000 Bangla numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
 
 ## Get the data
 Script to download images and easy to use functions are on the way!
