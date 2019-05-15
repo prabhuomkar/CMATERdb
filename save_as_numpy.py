@@ -62,8 +62,8 @@ def save(numeral_type):
                 train_y.append(int(dirname))
             count += 1
 
-    train_x = np.array(train_x).reshape(-1, 32, 32, 3).astype(np.uint8) / 255.
-    test_x = np.array(test_x).reshape(-1, 32, 32, 3).astype(np.uint8) / 255.
+    train_x = np.array(train_x).reshape(-1, 32, 32, 3).astype(np.uint8)
+    test_x = np.array(test_x).reshape(-1, 32, 32, 3).astype(np.uint8)
     train_y = np.array(train_y).reshape(-1).astype(np.int64)
     test_y = np.array(test_y).reshape(-1).astype(np.int64)
 
@@ -81,5 +81,5 @@ def save(numeral_type):
 
 
 if __name__ == '__main__':
-    save('telugu')
+    save('bangla')
     # load('bangla')
