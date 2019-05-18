@@ -68,9 +68,9 @@ News coming for Tensorflow developers!
 ## The Dataset
 - **CMATERdb 3.1.1: Handwritten Bangla numeral database** is a balanced dataset of total 6000 Bangla numerals (32x32 RGB coloured, 6000 images), each having 600 images per classs(per digit).
 ![Bangla Numerals](images/bangla.png)
-- **CMATERdb 3.2.1: Handwritten Devanagari numeral database** is a balanced dataset of total 3000 Bangla numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
+- **CMATERdb 3.2.1: Handwritten Devanagari numeral database** is a balanced dataset of total 3000 Devanagari numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
 ![Devanagari Numerals](images/devanagari.png)
-- **CMATERdb 3.4.1: Handwritten Telugu numeral database** is a balanced dataset of total 3000 Bangla numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
+- **CMATERdb 3.4.1: Handwritten Telugu numeral database** is a balanced dataset of total 3000 Telugu numerals (32x32 RGB coloured, 3000 images), each having 300 images per classs(per digit).
 ![Telugu Numerals](images/telugu.png)
 
 ## Get the data
