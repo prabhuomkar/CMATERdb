@@ -1,4 +1,9 @@
-
+"""
+Note: Do not refer to this script for any usage!
+Developer script to convert CMATERdb datasets into NumPy format
+Author: Omkar Prabhu (prabhuomkar)
+License: Apache 2.0
+"""
 from glob import glob
 import os
 import re
@@ -20,8 +25,8 @@ def load(numeral_type):
         None
     """
 
-    train = np.load('datasets/'+numeral_type+'-numerals/training-images.npz')
-    test = np.load('datasets/'+numeral_type+'-numerals/testing-images.npz')
+    train = np.load(os.path.join(os.path.dirname(__file__), '../datasets/'+numeral_type+'-numerals/training-images.npz'))
+    test = np.load(os.path.join(os.path.dirname(__file__), '../datasets/'+numeral_type+'-numerals/testing-images.npz'))
     print('Total Training: ', str(len(train['labels'])))
     print('Total Testing: ', str(len(test['labels'])))
     print('Training Data:')
@@ -76,8 +81,8 @@ def save(numeral_type):
     plt.title(test_y[299])
     plt.imshow(test_x[299])
     plt.show()
-    np.savez_compressed('datasets/'+numeral_type+'-numerals/training-images.npz', images=train_x, labels=train_y)
-    np.savez_compressed('datasets/'+numeral_type+'-numerals/testing-images.npz', images=test_x, labels=test_y)
+    np.savez_compressed('../datasets/'+numeral_type+'-numerals/training-images.npz', images=train_x, labels=train_y)
+    np.savez_compressed('../datasets/'+numeral_type+'-numerals/testing-images.npz', images=test_x, labels=test_y)
 
 
 if __name__ == '__main__':

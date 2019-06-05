@@ -62,8 +62,8 @@ If you use any of the CMATERdb datasets in your work, we would appreciate a refe
 
 ## News and Updates
 
-**IMPORTANT** 
-News coming for Tensorflow developers!
+**IMPORTANT**:  
+- How to use script added!
 
 ## The Dataset
 - **CMATERdb 3.1.1: Handwritten Bangla numeral database** is a balanced dataset of total 6000 Bangla numerals (32x32 RGB coloured, 6000 images), each having 600 images per classs(per digit).
@@ -75,6 +75,9 @@ News coming for Tensorflow developers!
 
 ## Get the data
 Script to download images and easy to use functions are on the way!
+
+## How to use?
+Check out our load function in [usage.py](scripts/usage.py)
 
 ### CMATERdb 3.1.1: Handwritten Bangla numeral database
 | File                        | Examples |  Download (NumPy format)        |
